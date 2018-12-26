@@ -7,6 +7,8 @@ import { connect } from "react-redux";
 import HUD from "components//HUD";
 import Foreground from "components/Foreground";
 
+import { ASSET_URL } from "utils/constants";
+
 import { OpponentInterface } from "utils/types";
 
 interface Props {
@@ -42,7 +44,7 @@ class Game extends Component<Props, State> {
         <style jsx>{`
           .Game {
             position: absolute;
-            background-image: url(/static/img/background.jpg);
+            background-image: url(${ASSET_URL}/static/img/background.jpg);
             height: 100%;
             width: 100%;
             z-index: 0;

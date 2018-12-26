@@ -3,6 +3,8 @@ import { Component } from "react";
 
 import { connect } from "react-redux";
 
+import { ASSET_URL } from "utils/constants";
+
 import { StoreInterface } from "utils/types";
 
 interface Props {
@@ -51,17 +53,17 @@ class Foreground extends Component<Props, State> {
       <div className="Foreground">
         <img
           className="opponent player"
-          src="/static/img/character/body.png"
+          src={`${ASSET_URL}/static/img/character/body.png`}
           alt="שחקן"
         />
         <img
           className={`opponent enemy ${this.state.isEnemyHidden ? "hide" : ""}`}
-          src={`/static/img/${this.props.currentEnemy.srcName}/body.png`}
+          src={`${ASSET_URL}/static/img/${this.props.currentEnemy.srcName}/body.png`}
           alt="אויב"
         />
         <div className="grass">
           {[...Array(numGrassBlocks)].map((_, i) => {
-            return <img src="/static/img/grass.png" alt="אדמה" key={i} />;
+            return <img src={`${ASSET_URL}/static/img/grass.png`} alt="אדמה" key={i} />;
           })}
         </div>
         <style jsx>{`

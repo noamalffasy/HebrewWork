@@ -7,6 +7,8 @@ import HealthBar from "components/HealthBar";
 
 import { nextEnemy, updateState } from "reduxStore/actions";
 
+import { ASSET_URL } from "utils/constants";
+
 import { OpponentInterface, StoreInterface } from "utils/types";
 import { Dispatch } from "redux";
 
@@ -96,7 +98,7 @@ class OpponentHUD extends Component<Props, State> {
           }
 
           .OpponentHUD .head .head-img {
-            background-image: url(/static/img/${this.props.opponent.srcName}/head.png);
+            background-image: url(${ASSET_URL}/static/img/${this.props.opponent.srcName}/head.png);
             background-size: 90% 90%;
             background-repeat: no-repeat;
             background-position: center center;

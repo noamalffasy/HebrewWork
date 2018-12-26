@@ -16,6 +16,7 @@ class HUD extends Component<Props> {
       <div className="HUD">
         <OpponentHUD
           opponent={{
+            id: 0,
             hp: this.props.playerHP,
             maxHP: 100,
             name: "במבה",
