@@ -7,16 +7,19 @@ class MyDocument extends Document {
   }
 
   render() {
+    const assetPrefix =
+      process.env.NODE_ENV === "production" ? "/HebrewWork" : "";
+
     return (
       <html>
         <Head>
           <link
             rel="stylesheet"
-            href="/static/css/bootstrap/bootstrap-reboot.min.css"
+            href={`${assetPrefix}/static/css/bootstrap/bootstrap-reboot.min.css`}
           />
           <link
             rel="stylesheet"
-            href="/static/css/bootstrap/bootstrap-grid.min.css"
+            href={`${assetPrefix}/static/css/bootstrap/bootstrap-grid.min.css`}
           />
         </Head>
         <body>
