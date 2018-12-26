@@ -1,0 +1,1 @@
+export const UPDATE_HP_PLAYER = "UPDATE_HP_PLAYER";
