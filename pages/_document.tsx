@@ -1,11 +1,28 @@
 import Document, { Head, Main, NextScript } from "next/document";
 
 import { ASSET_URL } from "utils/constants";
+import enemiesList from "utils/enemiesList";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
+  }
+
+  componentWillMount() {
+    let images = [];
+    function preload(...urls: string[]) {
+      for (let i = 0; i < urls.length; i++) {
+        images[i] = new Image();
+        images[i].src = urls[i];
+      }
+    }
+    preload(
+      ...[
+        ...enemiesList,
+        { srcName: `${ASSET_URL}/static/img/character/body.png` }
+      ].map(character => character.srcName)
+    );
   }
 
   render() {
