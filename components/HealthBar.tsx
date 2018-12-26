@@ -37,7 +37,7 @@ class HealthBar extends Component<Props> {
           }
 
           .health-outer .healthbar .health {
-            width: ${this.props.opponent.hp}%;
+            width: ${this.props.opponent.hp > 0 ? this.props.opponent.hp : 0}%;
             height: 100%;
             background: #c00;
             transition: all 0.3s;
