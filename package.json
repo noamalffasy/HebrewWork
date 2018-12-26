@@ -5,7 +5,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "NODE_ENV=production next export",
+    "export": "yarn build && rm -rf out && next export && touch out/.nojekyll",
     "type-check": "tsc"
   },
   "dependencies": {
