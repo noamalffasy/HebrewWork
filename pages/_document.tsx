@@ -10,19 +10,22 @@ class MyDocument extends Document {
   }
 
   componentWillMount() {
-    let images = [];
-    function preload(...urls: string[]) {
-      for (let i = 0; i < urls.length; i++) {
-        images[i] = new Image();
-        images[i].src = urls[i];
+    if (typeof window !== "undefined") {
+      let images: HTMLImageElement[] = [];
+      
+      function preload(...urls: string[]) {
+        for (let i = 0; i < urls.length; i++) {
+          images[i] = document.createElement("img");
+          images[i].src = urls[i];
+        }
       }
+      preload(
+        ...[
+          ...enemiesList,
+          { srcName: `${ASSET_URL}/static/img/character/body.png` }
+        ].map(character => character.srcName)
+      );
     }
-    preload(
-      ...[
-        ...enemiesList,
-        { srcName: `${ASSET_URL}/static/img/character/body.png` }
-      ].map(character => character.srcName)
-    );
   }
 
   render() {
