@@ -27,7 +27,7 @@ const questions: QuestionInterface[] = [
     question: "מה הוא הנשוא במשפט הבא?",
     sentence: "הם הולכים לים",
     answerLabel: "נשוא",
-    correctAnswer: "הם"
+    correctAnswer: "הולכים"
   },
   {
     id: 5,
