@@ -4,13 +4,10 @@ import { Provider } from "react-redux";
 import App, { Container } from "next/app";
 import withReduxStore from "lib/with-redux-store";
 
-import { OpponentInterface } from "utils/types";
+import { StoreInterface } from "utils/types";
 
 interface Props {
-  reduxStore: {
-    player: OpponentInterface;
-    enemy: OpponentInterface;
-  };
+  reduxStore: StoreInterface;
 }
 
 class MyApp extends App<Props> {

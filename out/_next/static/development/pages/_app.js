@@ -11602,20 +11602,20 @@ function (_App) {
       return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_app__WEBPACK_IMPORTED_MODULE_2__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 17
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_redux__WEBPACK_IMPORTED_MODULE_1__["Provider"], {
         store: reduxStore,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 18
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Component, _extends({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 19
         },
         __self: this
       }))));
@@ -11668,7 +11668,7 @@ var NEXT_ENEMY = "NEXT_ENEMY";
 /*!*****************************************!*\
   !*** ./reduxStore/actionTypes/index.ts ***!
   \*****************************************/
-/*! no static exports found */
+/*! exports provided: UPDATE_HP_PLAYER, UPDATE_HP_ENEMY, NEXT_ENEMY, UPDATE_STATE */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

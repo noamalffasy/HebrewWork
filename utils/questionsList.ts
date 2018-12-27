@@ -95,7 +95,7 @@ const questions: QuestionInterface[] = [
   {
     id: 14,
     question: "מה הוא הנושא הסתמי במשפט הבא?",
-    sentence: "בנו אולפן חדש לפנ חודש",
+    sentence: "בנו אולפן חדש לפני חודש",
     answerLabel: "נושא סתמי",
     correctAnswer: "בנו"
   },
