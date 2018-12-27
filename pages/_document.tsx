@@ -33,7 +33,6 @@ class MyDocument extends Document {
       <html>
         <Head>
           <meta charSet="UTF-8" />
-          <title>עבודה בעברית</title>
           <meta name="description" content="עבודה בעברית 2018" />
           <meta
             name="viewport"
